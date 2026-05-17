@@ -1,0 +1,724 @@
+/* ==========================================================================
+   1. ОБНУЛЕНИЕ И СЕТКА
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #0f172a;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   2. ШАПКА (HEADER)
+   ========================================================================== */
+.main-header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #0284c7;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #0284c7;
+}
+
+.btn-header {
+    background: #0284c7;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-header:hover {
+    background: #0369a1;
+}
+
+/* ==========================================================================
+   3. ГЛАВНЫЙ БАННЕР (HERO)
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 120px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 46px;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #475569;
+    margin-bottom: 36px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/* Кнопки */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: #0284c7;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #0369a1;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+}
+
+.btn-secondary:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+/* ==========================================================================
+   4. БЛОК ПРЕИМУЩЕСТВ (FEATURES)
+   ========================================================================== */
+.features-section {
+    background: #ffffff;
+    padding: 60px 0;
+}
+
+.features-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.feature-card {
+    flex: 1;
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   5. СЕТКА УСЛУГ (SERVICES)
+   ========================================================================== */
+.services-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    flex: 1;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    color: #0f172a;
+    font-size: 20px;
+}
+
+.service-card p {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+.service-link {
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   6. ОТЗЫВЫ (REVIEWS)
+   ========================================================================== */
+.reviews-section {
+    background-color: #f1f5f9;
+}
+
+.reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.review-stars {
+    color: #f59e0b;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.review-author {
+    font-weight: 700;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+/* ==========================================================================
+   7. АККОРДЕОН (FAQ)
+   ========================================================================== */
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: #ffffff;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 24px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+    cursor: pointer;
+}
+
+.accordion-header span {
+    font-size: 22px;
+    color: #0284c7;
+    transition: transform 0.3s;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content {
+    padding: 0 24px 22px 24px;
+    color: #64748b;
+}
+
+.accordion-item.active .accordion-body {
+    max-height: 300px;
+}
+
+.accordion-item.active .accordion-header span {
+    transform: rotate(45deg);
+}
+
+/* ==========================================================================
+   8. ФОРМА ЗАПИСИ
+   ========================================================================== */
+.appointment-section {
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+}
+
+.form-container {
+    max-width: 550px;
+    text-align: center;
+}
+
+.form-subtitle {
+    margin-bottom: 30px;
+    color: #64748b;
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.appointment-form input {
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.appointment-form input:focus {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+}
+
+/* ==========================================================================
+   СТИЛИ ДЛЯ СТРАНИЦЫ УСЛУГ (SERVICES PAGE)
+   ========================================================================== */
+.page-title-section {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.page-title-section h1 {
+    color: #0f172a;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.page-title-section p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.price-section {
+    padding: 60px 0;
+}
+
+.price-block {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+    border: 1px solid #e2e8f0;
+}
+
+.price-block h2 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 24px;
+    border-left: 4px solid #0284c7;
+    padding-left: 12px;
+    font-weight: 700;
+}
+
+/* Стилизация HTML таблиц */
+.table-responsive {
+    overflow-x: auto; /* Позволяет таблице скроллиться на телефонах, чтобы не ломать верстку */
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.price-table th,
+.price-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 15px;
+}
+
+.price-table th {
+    background: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.price-table td {
+    color: #334155;
+}
+
+.price-value {
+    font-weight: 600;
+    color: #0f172a;
+    white-space: nowrap; /* Цена не переносится на две строки */
+    text-align: right;
+    width: 150px;
+}
+
+.free-service {
+    color: #16a34a; /* Зеленый цвет для бесплатных услуг */
+}
+
+.price-table tr:hover td {
+    background: #f8fafc; /* Подсветка строки при наведении курсора */
+}
+
+/* Мобильный адаптив для таблиц */
+@media (max-width: 768px) {
+    .price-block {
+        padding: 20px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .page-title-section h1 {
+        font-size: 28px;
+    }
+}
+
+/* ==========================================================================
+   СТИЛИ ДЛЯ СТРАНИЦЫ ВРАЧЕЙ (DOCTORS PAGE)
+   ========================================================================== */
+.doctors-section {
+    padding: 60px 0;
+}
+
+.doctors-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.doctor-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+    text-align: center;
+    flex: 1;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column; /* Выстраиваем контент карточки вертикально */
+    justify-content: space-between; /* Кнопки всегда будут на одном уровне внизу */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Иконки-аватары в круглых цветных подложках */
+.doctor-avatar {
+    font-size: 50px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+}
+
+.avatar-blue { background-color: #e0f2fe; }
+.avatar-green { background-color: #dcfce7; }
+.avatar-purple { background-color: #f3e8ff; }
+
+.doctor-card h3 {
+    font-size: 20px;
+    color: #0f172a;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.doctor-specialty {
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.doctor-desc {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Помогает тексту занимать все свободное место */
+}
+
+.doctor-exp {
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 24px;
+}
+
+.doctor-exp span {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* Стилизация кнопки внутри карточки */
+.btn-doctor {
+    display: block;
+    background-color: #f1f5f9;
+    color: #0f172a;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border: 1px solid #cbd5e1;
+}
+
+.btn-doctor:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+    border-color: #0284c7;
+}
+
+/* Мобильный адаптив для карточек */
+@media (max-width: 768px) {
+    .doctors-grid {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .doctor-card {
+        padding: 30px 20px;
+    }
+}
+
+/* ==========================================================================
+   9. ПОДВАЛ (FOOTER)
+   ========================================================================== */
+.main-footer {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 60px 0 0 0;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand {
+    flex: 2;
+    max-width: 400px;
+}
+
+.footer-brand .logo {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-desc {
+    font-size: 14px;
+}
+
+.footer-links, .footer-contacts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer h4 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #0284c7;
+}
+
+.footer-contacts p {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1e293b;
+    padding: 20px 0;
+    font-size: 13px;
+}
+
+.bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-legal a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* ==========================================================================
+   10. АДАПТИВНОСТЬ
+   ========================================================================== */
+@media (max-width: 768px) {
+    section {
+        padding: 50px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .btn-header {
+        width: 100%;
+        text-align: center;
+    }
+
+    .features-grid, .services-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bottom-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
